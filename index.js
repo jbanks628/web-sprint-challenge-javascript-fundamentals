@@ -174,7 +174,7 @@ function CuboidMaker(attr){
   Formula for cuboid volume: length * width * height   */
 
   CuboidMaker.prototype.volume = function(length, width, height){
-    return length * width * height;
+    return this.length * this.width * this.height;
    }
 
 
@@ -184,7 +184,7 @@ function CuboidMaker(attr){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
   CuboidMaker.prototype.surfaceArea = function(length, width, height){
-    return  2 * (length * width + length * height + width * height);
+    return  2 * (this.length * this.width + this.length * this.height + this.width * this.height);
    }
 
 
@@ -211,20 +211,25 @@ let cuboid = new CuboidMaker({
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-  constructor(length, width, height){
-    this.length = length;
-    this.width = width;
-    this.height = height; 
+  constructor(attr){
+    this.length = attr.length;
+    this.width = attr.width;
+    this.height = attr.height; 
   }
-  volume(length, width, height){
-    return length * width * height;
+  volume(){
+    return this.length * this.width * this.height;
   }
-  surfaceArea(length, width, height){
-    return 2 * (length * width + length * height + width * height);
+  surfaceArea(){
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 
 }
-const cuboidTwo = new CuboidMaker(4, 5, 5);
+
+let cuboidTwo = new CuboidMaker({
+  length: 4, 
+  width: 5, 
+  height: 5
+});
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
