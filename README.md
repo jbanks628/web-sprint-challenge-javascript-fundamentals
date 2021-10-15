@@ -26,13 +26,39 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+1.) `.map` is used to return a new updated array from calling a function for every array element in order.
+Use: You can use `.map` for an array of "Favorite Book" data that already has the name, published year, and genre, & return a new updated array that adds the total pages of each book.
+
+2.) `.reduce` returns a single value of the function's accumulated values.
+Use: You can have an array of data that includes numbers from various U.S. state populations and find the accumulated value of all the populations.
+
+3.) `.filter` filters through the array with certain conditions. If it is true, it is added to the new array. If false it won't be added.
+Use: You can have that same "Favorite Book" data that has a condition of the book being published between 1990-2010 and return a new array of only the books that were published between those years.
+
+All of these methods do not change the original array.
+
 2. Explain the difference between a callback and a higher order function.
+
+A callback function is the function that is referenced as an argument from another function and is later referenced.
+A higher order function has another function inside of it as an argument.
 
 3. Explain what a closure is.
 
+A closure is when the inside function references an outside function.
+
 4. Describe the four principles of the 'this' keyword.
 
+"Implicit Binding": where the function is called as a method. The 'this' keyword refers to the whatever is on the left of the dot when the function is invoked.
+
+"Window Binding": The function is called in the global scope. When in strict mode, it returns undefined. Otherwise, it will return the global object or window. 
+
+"Explicit Binding": called by call(), bind(), and apply(). call() immediately invoked the function and passes arguments one by one. bind() passes arguments one by one but doesn't immediately invoke the function.
+
+"New Binding": The function is called by 'new'. It creates a new object, and the 'this' keyword refers to the new object being created. 
+
 5. Why do we need super() in an extended class?
+
+"super()" calls the parent & gives a child access to the parent's methods and properties. 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
